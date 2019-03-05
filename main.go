@@ -7,7 +7,7 @@ import (
 	bugsnag "github.com/bugsnag/bugsnag-go"
 	cli "github.com/jawher/mow.cli"
 
-	"github.com/metloff/md5generator/api"
+	"github.com/metloff/hash_generator/api"
 )
 
 // Флаги.

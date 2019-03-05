@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hash Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body style="font-family: 'Montserrat'">
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        MD5 Hash Generator
+      </h1>
+      <form action="/" method="POST">
+        <div class="field">
+            <label class="label">Word</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success is-medium" type="text" name="word" placeholder="Your text" value={{ .Word }}>
+              <span class="icon is-small is-left">
+                <i class="fas fa-pen-square"></i>
+              </span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Salt</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success is-medium" type="text" name="salt" placeholder="Your salt" value={{ .Salt }}>
+              <span class="icon is-small is-left">
+                <i class="fas fa-fire"></i>
+              </span>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+          
+      </form>
+
+        {{ if .Present }}
+            <div class="box" style="text-align:center; margin-top: 35px;">
+                <h2>{{.Hash}}</h3>
+            </div>
+        {{ end }}
+    </div>
+  </section>
+
+
+  </body>
+</html>

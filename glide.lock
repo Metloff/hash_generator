@@ -1,5 +1,5 @@
-hash: d17a686bedd0dfdac743bcac880c6d9601297922f7bde2b5e36dd53152792ba7
-updated: 2019-03-05T02:13:53.589712+03:00
+hash: 3285de99810e5bbd463aff20ffb245277e8958b3889daf93b9a0af1036a3ea30
+updated: 2019-03-05T12:15:30.744665+03:00
 imports:
 - name: github.com/bugsnag/bugsnag-go
   version: 834d8fee64233ea79b0389ad7a5a438261788f66
@@ -10,9 +10,12 @@ imports:
   - sessions
 - name: github.com/bugsnag/panicwrap
   version: 1d162ee1264c75b29b0f7733221bedfae7559079
+- name: github.com/daaku/go.zipexe
+  version: db7cf2ba330f8c2d28b827826e33d6628ea7e9e0
 - name: github.com/GeertJohan/go.rice
   version: 0af3f3b09a0a8b391f63ab52ba5ab50f84fabd30
   subpackages:
+  - embedded
   - rice
 - name: github.com/gofrs/uuid
   version: 6b08a5c5172ba18946672b49749cde22873dd7c2
@@ -30,4 +33,6 @@ imports:
   - internal/values
 - name: github.com/kardianos/osext
   version: 2bc1f35cddc0cc527b4bc3dce8578fc2a6c11384
+- name: github.com/pasztorpisti/qs
+  version: 8d6c33ee906c9843501bfe03089ae2ca09940e15
 testImports: []

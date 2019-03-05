@@ -9,3 +9,4 @@ import:
 - package: github.com/GeertJohan/go.rice
   subpackages:
   - rice
+- package: github.com/pasztorpisti/qs

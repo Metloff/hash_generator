@@ -16,10 +16,8 @@ const (
 )
 
 var (
-	// mainPageT = template.Must(template.New("collage").Parse(string(gobindata.MustAsset("html/main.html"))))
-	mainPageT *template.Template
-	errorT    *template.Template
-	// errorT    = template.Must(template.New("collage").Parse(string(gobindata.MustAsset("html/error.html"))))
+	indexT *template.Template
+	errorT *template.Template
 )
 
 // Manager — менеджер API.
@@ -54,21 +52,25 @@ func NewManager() Manager {
 	}
 
 	// get file contents as string
-	errorString, err := templateBox.String("html/error.html")
-	if err != nil {
+	var errorString, indexString string
+	if errorString, err = templateBox.String("html/error.html"); err != nil {
+		log.Fatal(err)
+	}
+	if indexString, err = templateBox.String("html/index.html"); err != nil {
 		log.Fatal(err)
 	}
 
 	// parse and execute the template
 	errorT = template.Must(template.New("md5").Parse(errorString))
+	indexT = template.Must(template.New("md5").Parse(indexString))
 
 	// Методы API.
 	m.addHandlers([]route{
 		{
 			Method:   "POST",
 			Path:     "/",
-			Name:     "GenerateMD5",
-			HndlrGen: m.hGenerateMD5,
+			Name:     "GenerateHash",
+			HndlrGen: m.hGenerateHash,
 			Wrappers: []func(inner http.Handler) http.Handler{m.wrapRecover},
 		},
 		{
