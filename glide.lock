@@ -1,0 +1,33 @@
+hash: d17a686bedd0dfdac743bcac880c6d9601297922f7bde2b5e36dd53152792ba7
+updated: 2019-03-05T02:13:53.589712+03:00
+imports:
+- name: github.com/bugsnag/bugsnag-go
+  version: 834d8fee64233ea79b0389ad7a5a438261788f66
+  subpackages:
+  - device
+  - errors
+  - headers
+  - sessions
+- name: github.com/bugsnag/panicwrap
+  version: 1d162ee1264c75b29b0f7733221bedfae7559079
+- name: github.com/GeertJohan/go.rice
+  version: 0af3f3b09a0a8b391f63ab52ba5ab50f84fabd30
+  subpackages:
+  - rice
+- name: github.com/gofrs/uuid
+  version: 6b08a5c5172ba18946672b49749cde22873dd7c2
+- name: github.com/gorilla/mux
+  version: a7962380ca08b5a188038c69871b8d3fbdf31e89
+- name: github.com/jawher/mow.cli
+  version: d9c41c7c90d99b076732ee72a657577128d610da
+  subpackages:
+  - internal/container
+  - internal/flow
+  - internal/fsm
+  - internal/lexer
+  - internal/matcher
+  - internal/parser
+  - internal/values
+- name: github.com/kardianos/osext
+  version: 2bc1f35cddc0cc527b4bc3dce8578fc2a6c11384
+testImports: []
